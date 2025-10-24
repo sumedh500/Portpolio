@@ -565,6 +565,65 @@ section {
 .portfolio #portfolio-flters li:last-child {
   margin-right: 0;
 }
+.count-box {
+  text-align: center;
+  background: #fff;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle hover lift and glow */
+.count-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Trophy Icon */
+.count-box i {
+  font-size: 60px;
+  color: #ffbf00; /* gold color */
+  margin-bottom: 15px;
+  animation: bounceIn 1s ease;
+}
+
+/* Number and X styling */
+.count-box .suffix {
+  font-size: 60px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ffbf00, #ff6f00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Text below the number */
+.count-box p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Simple icon bounce animation */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 .portfolio .portfolio-wrap {
   transition: 0.3s;
@@ -717,6 +776,14 @@ section {
   color: #fff;
   font-size: 24px;
   line-height: 0;
+}
+
+.count-box .purecounter,
+.count-box .suffix {
+  font-size: 48px;         /* match your counter size */
+  font-weight: 700;        /* make it bold */
+  color: #000;             /* adjust color if needed */
+  line-height: 1;
 }
 
 .services .icon-box:hover .icon {
