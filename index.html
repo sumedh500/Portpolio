@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sumedh Nikalje — Full-stack engineer</title>
+<meta name="description" content="Full-stack engineer with four years in Angular and Node. Payment integrations, message queues, and an admission portal serving 400,000+ students. Open to SDE-II roles in Mumbai." />
+<meta name="theme-color" content="#071522" />
+<link rel="icon" href="assets/img/favicon.png" />
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sumedh Nikalje — Full-stack engineer" />
+<meta property="og:description" content="I draw the system before I write a single line of it. Four years of Angular and Node in production — payments, queues, caches, and a portal 400,000 students hit on the same morning." />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#071522;
+  --plate:#0D2032;
+  --plate-2:#132B41;
+  --rule:#1E3A54;
+  --chalk:#DDE9F2;
+  --dim:#7593AD;
+  --cyan:#6FD3EE;
+  --coral:#FF8360;
+  --display:'Space Grotesk',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--navy);color:var(--chalk);font-family:var(--display);
+  line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(rgba(111,211,238,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(111,211,238,.05) 1px,transparent 1px);
+  background-size:30px 30px;
+}
+.wrap{max-width:1060px;margin:0 auto;padding:0 26px}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:60;background:rgba(7,21,34,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.nav-in{display:flex;justify-content:space-between;align-items:center;height:62px}
+.brand{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.brand b{color:var(--chalk);font-weight:500}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--dim);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--cyan)}
+@media(max-width:720px){.nav-links{display:none}}
+
+/* ---------- plate ---------- */
+.plate{position:relative;border:1px solid var(--rule);background:rgba(13,32,50,.72);border-radius:2px}
+.plate::before,.plate::after{
+  content:"";position:absolute;width:9px;height:9px;border:1px solid var(--cyan);opacity:.55;
+}
+.plate::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.plate::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+
+/* ---------- hero ---------- */
+.hero{padding:78px 0 60px}
+.tagline{
+  font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--coral);margin-bottom:22px;display:flex;align-items:center;gap:12px;
+}
+.tagline::after{content:"";flex:1;height:1px;background:var(--rule);max-width:160px}
+h1{font-size:clamp(2.3rem,6vw,4.2rem);line-height:1.04;letter-spacing:-.035em;font-weight:700;margin-bottom:22px}
+h1 .hl{color:var(--cyan)}
+.lede{font-size:1.03rem;color:var(--dim);max-width:56ch;margin-bottom:32px}
+.lede b{color:var(--chalk);font-weight:500}
+.cta{display:flex;gap:13px;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:12.5px;padding:13px 26px;text-decoration:none;border:1px solid var(--rule);color:var(--chalk);border-radius:2px;transition:all .2s;display:inline-block}
+.btn:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(111,211,238,.07)}
+.btn.pri{background:var(--cyan);color:var(--navy);border-color:var(--cyan);font-weight:500}
+.btn.pri:hover{background:#8FE0F5;color:var(--navy)}
+
+/* ---------- diagram ---------- */
+.diagram{margin-top:56px;padding:26px 22px 20px}
+.dg-head{
+  display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:18px;flex-wrap:wrap;gap:8px;
+}
+svg.arch{width:100%;height:auto;display:block}
+.node{fill:var(--plate-2);stroke:var(--rule);stroke-width:1}
+.node-hi{fill:rgba(111,211,238,.1);stroke:var(--cyan);stroke-width:1}
+.nlabel{font-family:'IBM Plex Mono',monospace;font-size:11px;fill:var(--chalk)}
+.nsub{font-family:'IBM Plex Mono',monospace;font-size:9px;fill:var(--dim)}
+.edge{fill:none;stroke:var(--rule);stroke-width:1.5}
+.flow{fill:none;stroke:var(--cyan);stroke-width:2;stroke-linecap:round;stroke-dasharray:14 260}
+.dim-line{stroke:var(--coral);stroke-width:1;stroke-dasharray:3 3;opacity:.6}
+.dim-txt{font-family:'IBM Plex Mono',monospace;font-size:9px;fill:var(--coral)}
+
+/* ---------- sections ---------- */
+section{padding:86px 0 0}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--coral);margin-bottom:14px}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.028em;font-weight:700;margin-bottom:12px}
+.note{color:var(--dim);max-width:58ch;margin-bottom:40px}
+
+/* ---------- specs (work) ---------- */
+.spec{padding:28px 26px;margin-bottom:16px;transition:border-color .25s,transform .25s}
+.spec:hover{border-color:var(--cyan);transform:translateY(-3px)}
+.spec-top{display:flex;justify-content:space-between;gap:18px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+.spec .ref{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--dim);margin-bottom:10px;text-transform:uppercase}
+.spec h3{font-size:1.28rem;font-weight:500;letter-spacing:-.015em}
+.spec .stat{font-family:var(--mono);font-size:11.5px;color:var(--cyan);white-space:nowrap}
+.spec p{color:var(--dim);font-size:.95rem;margin:10px 0 18px;max-width:66ch}
+.tags{display:flex;gap:7px;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:10.5px;color:var(--dim);border:1px solid var(--rule);padding:4px 9px;border-radius:2px}
+
+/* ---------- legend / stack ---------- */
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.leg{background:var(--navy);padding:24px 22px}
+.leg h4{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:13px;font-weight:500}
+.leg ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.leg li{font-size:.92rem;color:var(--dim);display:flex;gap:9px;align-items:center}
+.leg li::before{content:"";width:6px;height:6px;background:var(--cyan);opacity:.6;flex-shrink:0}
+
+/* ---------- revisions (timeline) ---------- */
+.rev{display:grid;grid-template-columns:130px 1fr;gap:26px;padding:24px 0;border-top:1px solid var(--rule)}
+.rev:last-child{border-bottom:1px solid var(--rule)}
+.rev .when{font-family:var(--mono);font-size:11.5px;color:var(--dim);padding-top:4px;letter-spacing:.04em}
+.rev h3{font-size:1.1rem;font-weight:500;margin-bottom:3px}
+.rev .where{font-family:var(--mono);font-size:11.5px;color:var(--cyan);margin-bottom:10px}
+.rev p{color:var(--dim);font-size:.93rem}
+@media(max-width:640px){.rev{grid-template-columns:1fr;gap:8px}}
+
+/* ---------- contact ---------- */
+.contact{text-align:center;padding:96px 0 80px}
+.contact .note{margin:0 auto 30px}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--rule);padding:22px 0;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .flow{stroke-dasharray:none;opacity:.4}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <span class="brand"><b>Sumedh Nikalje</b> — sheet 01</span>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#path">Path</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="wrap hero">
+  <p class="tagline">Full-stack engineer · Mumbai · Open to work</p>
+  <h1>I draw the system<br>before I write<br><span class="hl">a single line of it.</span></h1>
+  <p class="lede">Four years building <b>Angular and Node</b> platforms that carry money and crowds — payment gateways, message queues, caches, and an admission portal <b>400,000 students</b> hit on the same morning.</p>
+  <div class="cta">
+    <a class="btn pri" href="#work">See the work</a>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+
+  <div class="plate diagram">
+    <div class="dg-head"><span>Fig. 01 — admission portal, request path</span><span>peak 12k req/min</span></div>
+    <svg class="arch" viewBox="0 0 900 250" role="img" aria-label="Architecture diagram: client through load balancer to API layer, then Redis cache, MySQL with read replica, and RabbitMQ to a payment worker.">
+      <path class="edge" d="M120 70 H210" /><path class="edge" d="M330 70 H420" />
+      <path class="edge" d="M540 70 H630" /><path class="edge" d="M480 100 V160 H630" />
+      <path class="edge" d="M480 40 V25 H750 V45" /><path class="edge" d="M750 100 V160 H795" />
+
+      <path class="flow fl" d="M120 70 H210" /><path class="flow fl" d="M330 70 H420" />
+      <path class="flow fl" d="M540 70 H630" /><path class="flow fl" d="M480 100 V160 H630" />
+
+      <rect class="node" x="30" y="46" width="90" height="48" rx="2" />
+      <text class="nlabel" x="75" y="66" text-anchor="middle">client</text>
+      <text class="nsub" x="75" y="82" text-anchor="middle">angular 16</text>
+
+      <rect class="node" x="210" y="46" width="120" height="48" rx="2" />
+      <text class="nlabel" x="270" y="66" text-anchor="middle">load balancer</text>
+      <text class="nsub" x="270" y="82" text-anchor="middle">aws alb</text>
+
+      <rect class="node-hi" x="420" y="46" width="120" height="48" rx="2" />
+      <text class="nlabel" x="480" y="66" text-anchor="middle">api layer</text>
+      <text class="nsub" x="480" y="82" text-anchor="middle">node · express</text>
+
+      <rect class="node" x="630" y="46" width="110" height="48" rx="2" />
+      <text class="nlabel" x="685" y="66" text-anchor="middle">redis</text>
+      <text class="nsub" x="685" y="82" text-anchor="middle">cache · limits</text>
+
+      <rect class="node" x="630" y="136" width="110" height="48" rx="2" />
+      <text class="nlabel" x="685" y="156" text-anchor="middle">mysql</text>
+      <text class="nsub" x="685" y="172" text-anchor="middle">primary</text>
+
+      <rect class="node" x="790" y="136" width="90" height="48" rx="2" />
+      <text class="nlabel" x="835" y="156" text-anchor="middle">replica</text>
+      <text class="nsub" x="835" y="172" text-anchor="middle">reads</text>
+
+      <rect class="node" x="690" y="196" width="150" height="42" rx="2" />
+      <text class="nlabel" x="765" y="215" text-anchor="middle">rabbitmq → worker</text>
+      <text class="nsub" x="765" y="229" text-anchor="middle">payment webhooks</text>
+      <path class="edge" d="M685 184 V196" />
+
+      <line class="dim-line" x1="420" y1="112" x2="740" y2="112" />
+      <text class="dim-txt" x="580" y="126" text-anchor="middle">p95 184ms</text>
+    </svg>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="work">
+    <p class="eyebrow reveal">Sheet 02 — selected work</p>
+    <h2 class="reveal">Four systems, annotated</h2>
+    <p class="note reveal">Each one broke in an interesting way before it worked. That's usually the part worth discussing.</p>
+
+    <article class="plate spec reveal">
+      <div class="ref">Ref. A — platform</div>
+      <div class="spec-top"><h3>Admission portal</h3><span class="stat">400,000+ users</span></div>
+      <p>Owned it end to end — applications, document verification, seat allotment, fee collection. Read replicas and a Redis layer keep results day responsive when a year of traffic lands inside ninety minutes.</p>
+      <div class="tags"><span class="tag">Angular 16</span><span class="tag">Node</span><span class="tag">MySQL</span><span class="tag">Redis</span></div>
+    </article>
+
+    <article class="plate spec reveal">
+      <div class="ref">Ref. B — payments</div>
+      <div class="spec-top"><h3>Reconciliation without the spreadsheet</h3><span class="stat">CCAvenue · Razorpay</span></div>
+      <p>Moved settlement off fragile redirect callbacks onto a webhook-first flow with idempotent retries. Stuck transactions now resolve from the gateway's own record instead of a finance team's manual pass.</p>
+      <div class="tags"><span class="tag">Webhooks</span><span class="tag">RabbitMQ</span><span class="tag">Idempotency</span></div>
+    </article>
+
+    <article class="plate spec reveal">
+      <div class="ref">Ref. C — applied AI</div>
+      <div class="spec-top"><h3>Job recommendation engine</h3><span class="stat">LLM-backed</span></div>
+      <p>Scored candidate profiles against openings with embeddings plus a pass through the OpenAI API, caching the expensive lookups in Redis so a recruiter's second search costs milliseconds rather than money.</p>
+      <div class="tags"><span class="tag">OpenAI API</span><span class="tag">Redis</span><span class="tag">Express</span></div>
+    </article>
+
+    <article class="plate spec reveal">
+      <div class="ref">Ref. D — greenfield</div>
+      <div class="spec-top"><h3>CRM from an empty repo</h3><span class="stat">First engineer</span></div>
+      <p>Joined as engineer number one and built the CRM the business ran on — leads, pipelines, role-based access, reporting — then hired and led the team that grew around it.</p>
+      <div class="tags"><span class="tag">MEAN</span><span class="tag">RBAC</span><span class="tag">Team lead</span></div>
+    </article>
+  </section>
+
+  <section id="stack">
+    <p class="eyebrow reveal">Sheet 03 — legend</p>
+    <h2 class="reveal">Components I work with</h2>
+    <p class="note reveal">Production experience only. If it's listed, I've debugged it under load.</p>
+    <div class="legend reveal">
+      <div class="leg"><h4>Frontend</h4><ul><li>Angular 16+</li><li>TypeScript</li><li>RxJS</li><li>SCSS</li></ul></div>
+      <div class="leg"><h4>Backend</h4><ul><li>Node.js · Express</li><li>Microservices</li><li>Socket.IO</li><li>OpenAI API</li></ul></div>
+      <div class="leg"><h4>Data</h4><ul><li>MongoDB</li><li>MySQL</li><li>Redis</li><li>Query tuning</li></ul></div>
+      <div class="leg"><h4>Infrastructure</h4><ul><li>AWS EC2 · S3</li><li>RabbitMQ</li><li>Load balancers</li><li>Read replicas</li></ul></div>
+    </div>
+  </section>
+
+  <section id="path">
+    <p class="eyebrow reveal">Sheet 04 — revisions</p>
+    <h2 class="reveal">Where I've been</h2>
+    <div class="reveal" style="margin-top:34px">
+      <div class="rev">
+        <div class="when">2023 — 2025</div>
+        <div>
+          <h3>SDE-II</h3>
+          <div class="where">Offee</div>
+          <p>Owned the admission platform and its payment integrations, and shipped three LLM-backed features in the final year. Employee of the Quarter, twice.</p>
+        </div>
+      </div>
+      <div class="rev">
+        <div class="when">2021 — 2023</div>
+        <div>
+          <h3>Team Lead · First engineer</h3>
+          <div class="where">Chiefex Technologies</div>
+          <p>Built the company's CRM from scratch, then led the small team that grew around it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="contact wrap" id="contact">
+  <p class="eyebrow reveal">Sheet 05 — contact</p>
+  <h2 class="reveal">Let's talk architecture</h2>
+  <p class="note reveal">Looking for SDE-II and full-stack roles in Mumbai, Pune or Bangalore. Happy to whiteboard any of the above.</p>
+  <div class="cta reveal">
+    <a class="btn pri" href="mailto:hello@example.com">Email me</a>
+    <a class="btn" href="#">LinkedIn</a>
+    <a class="btn" href="#">GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in"><span>Mumbai, IN</span><span>Drawn and built from scratch</span></div>
+</footer>
+
+<script>
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const io = new IntersectionObserver((e) => {
+  e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
+}, { threshold: .12, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  el.style.transitionDelay = (i % 3) * 70 + 'ms';
+  io.observe(el);
+});
+
+if (!reduced) {
+  document.querySelectorAll('.arch .node, .arch .node-hi, .arch .nlabel, .arch .nsub, .arch .dim-line, .arch .dim-txt').forEach((el, i) => {
+    el.style.opacity = 0;
+    el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 420, delay: 260 + i * 45, fill: 'forwards', easing: 'ease-out' });
+  });
+
+  document.querySelectorAll('.arch .edge').forEach((p, i) => {
+    const len = p.getTotalLength();
+    p.style.strokeDasharray = len;
+    p.style.strokeDashoffset = len;
+    p.animate([{ strokeDashoffset: len }, { strokeDashoffset: 0 }],
+      { duration: 620, delay: 200 + i * 110, fill: 'forwards', easing: 'cubic-bezier(.4,0,.2,1)' });
+  });
+
+  document.querySelectorAll('.arch .flow').forEach((p, i) => {
+    const len = p.getTotalLength();
+    p.animate([{ strokeDashoffset: len }, { strokeDashoffset: -len }],
+      { duration: 2600, delay: 1400 + i * 320, iterations: Infinity, easing: 'linear' });
+  });
+}
+</script>
+</body>
+</html>
